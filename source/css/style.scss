@@ -20,7 +20,8 @@ html, button, input, select, textarea,
 }
 
 body {
-    background-color: #FFF;
+	/*背景颜色 FFFFF0-淡黄、#f5f5d5-阮一峰*/
+    background-color: #f5f5d5;;
     color: #444;
     font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -75,13 +76,16 @@ div {
             color: #555;
             span, &:hover {
                 color: #777;
-            }
+            };
+			// 字体样式
+			font-family: cursive;
         }
         .description {
             margin: .2em 0 0;
             color: #999;
         }
     }
+	// 右上侧按钮
     #nav-menu {
         margin: 10px 0 -1px;
         padding: 0;
@@ -100,7 +104,8 @@ div {
             }
             &.current {
                 border: 1px solid #ddd;
-                border-bottom-color: #fff;
+				// a标签下边框颜色-与首页背景色一样，不能直接设置成透明，因为外盒子的下边框设置了颜色
+                border-bottom-color: #F5F5D5;
             }
         }
     }
@@ -157,6 +162,7 @@ div {
         .category-list-count::after {
             content: ")";
         }
+		// 搜索框
         .search-form {
             position: relative;
             overflow: hidden;
@@ -175,6 +181,8 @@ div {
                 -webkit-box-shadow: none;
                 -moz-box-shadow: none;
                 box-shadow: none;
+				// 隐藏选中时的蓝框
+				outline: none;
             }
         }
     }
@@ -563,10 +571,12 @@ pre {
 /* *******************************************************
 * Process timelime, (homepage)
 ******************************************************* */
-
+/*历史页样式*/
+// 原数据：background-color: #fff;
 #process {
     padding: 80px 0;
-    background-color: #fff;
+	// 透明
+    background-color: rgba(0,0,0,0);
 }
 #process .col-md-2 i {
     font-size: 50px;
@@ -736,7 +746,8 @@ pre {
     height: 0;
     border-style: solid;
     border-width: 9px 9px 9px 0;
-    border-color: transparent #eee transparent transparent;
+	// 颜色-白色 #eee
+    border-color: transparent #fff transparent transparent;
     left: 0;
     top: 50%;
     margin-top: -9px;
@@ -777,9 +788,11 @@ pre {
   border-width: 10px;
   margin-top: -10px
 }
+/*历史页中的New*/
 #process .present {
   position: absolute;
-  top: -3%;
+  /*原为：-3%*/
+  top: -8%;
   right: 0;
   margin-top: -20px;
   line-height: 100%;
@@ -821,10 +834,13 @@ pre {
     #process .line {
         right: 10px;
     }
+	// 每项历史的盒子
     #process .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
         margin-right: 30px;
         margin-left: 45px;
         padding: 20px;
+		// 颜色-白色
+		background: #fff
     }
     #process .timeline-centered .timeline-entry {
         margin-right: 20px;
@@ -857,6 +873,22 @@ pre {
         background: #F8F8F8;
         border-bottom-color: #D26911;
     }
+}
+/*自定义阅读全文样式*/
+.readmore a {
+	display: inline-block;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #555;
+    background: #fff;
+    border: 2px solid #555;
+    text-decoration: none;
+    border-radius: 2px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    line-height: 2;
 }
 
 /* syntax highlight*/
