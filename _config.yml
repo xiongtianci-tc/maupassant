@@ -26,6 +26,7 @@ gitalk:
   client_secret:  
   admin:  
 # Valine评论相关参数 npm install valine --save
+# https://valine.js.org/
 valine: 
   # 是否开启
   enable: true
@@ -38,12 +39,12 @@ valine:
   # 是否需要验证，验证比较反人类建议false关闭
   verify: false
   # 默认留言框内的文字
-  placeholder: Just so so
+  placeholder: 
   # 默认头像
   avatar: 'mm' 
   # pagination size #默认单页的留言条数
   pageSize: 10
-  # 默认留言框的头部需要访问者输入的信息
+  # 默认留言框的头部需要访问者输入的信息 nick,mail,link
   guest_info: nick,mail,link
   
 # 默认使用Google搜索引擎

@@ -105,7 +105,7 @@ div {
             &.current {
                 border: 1px solid #ddd;
 				// a标签下边框颜色-与首页背景色一样，不能直接设置成透明，因为外盒子的下边框设置了颜色
-                border-bottom-color: #F5F5D5;
+                border-bottom-color: #fff;
             }
         }
     }
@@ -746,8 +746,8 @@ pre {
     height: 0;
     border-style: solid;
     border-width: 9px 9px 9px 0;
-	// 颜色-白色 #eee
-    border-color: transparent #fff transparent transparent;
+	// 颜色
+    border-color: transparent #eee transparent transparent;
     left: 0;
     top: 50%;
     margin-top: -9px;

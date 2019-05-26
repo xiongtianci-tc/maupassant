@@ -1,13 +1,20 @@
-#footer= 'Copyright © ' + '2018' + '-' + date(Date.now(), 'YYYY') + ' '
-  a(rel='nofollow', target='_blank', href='https://xiongtianci.coding.me') 天赐 |  
-  |  Powered by
-  a(rel='nofollow', target='_blank', href='https://github.com/xiongtianci-tc/maupassant-hexo')  脚印 
+//- 页脚
+//- 获得主题配置文件中的设置的建站时间
+if theme.footer.since
+  - var since = theme.footer.since + '-'
+else
+  - var since = ''
+
+#footer= 'Copyright © ' + since + date(Date.now(), 'YYYY') + ' '
+  a(rel='nofollow', target='_blank', href='https://xiongtianci.coding.me') 天赐
+  |  | Powered by 
+  a(rel='nofollow', target='_blank', href='https://github.com/xiongtianci-tc/maupassant-hexo') 脚印 
 
 
-//#footer= 'Copyright © ' + date(Date.now(), 'YYYY') + ' '
-//  a(href=url_for('.'), rel='nofollow')= config.title + '.'
-//  |  Powered by
-//  a(rel='nofollow', target='_blank', href='https://hexo.io')  Hexo.
-//  a(rel='nofollow', target='_blank', href='https://github.com/tufu9441/maupassant-hexo')  Theme
-//  |  by
-//  a(rel='nofollow', target='_blank', href='https://github.com/pagecho')  Cho.
+//- #footer= 'Copyright © ' + date(Date.now(), 'YYYY') + ' '
+//-   a(href=url_for('.'), rel='nofollow')= config.title + '.'
+//-   |  Powered by
+//-   a(rel='nofollow', target='_blank', href='https://hexo.io')  Hexo.
+//-   a(rel='nofollow', target='_blank', href='https://github.com/tufu9441/maupassant-hexo')  Theme
+//-   |  by
+//-   a(rel='nofollow', target='_blank', href='https://github.com/pagecho')  Cho.

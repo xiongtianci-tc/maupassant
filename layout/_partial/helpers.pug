@@ -1,3 +1,5 @@
+//- mixin-混入mixin是一种允许您在 Pug 中重复使用一整个代码块的方法
+
 mixin a_with_current(href, content, id)
   - var url = url_for(href)
   if (href == '.' && (is_home() || is_post())) || is_current(href)
